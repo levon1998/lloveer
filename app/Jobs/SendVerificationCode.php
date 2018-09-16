@@ -36,7 +36,7 @@ class SendVerificationCode implements ShouldQueue
         $firstName = $this->user->first_name;
         $email = $this->user->email;
 
-        Mail::send('email.verify', [
+        Mail::send('email.auth.verify', [
             'lastName'         => $this->user->last_name,
             'firstName'        => $this->user->first_name,
             'verificationCode' => $this->user->token
