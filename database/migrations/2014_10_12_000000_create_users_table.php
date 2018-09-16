@@ -19,10 +19,13 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->string('email')->nullable()->unique();
             $table->string('password');
-            $table->string('token');
+            $table->string('token')->nullable();
             $table->date('birthday');
             $table->enum('gender', ['Male', 'Female']);
             $table->boolean('is_verified')->default(0);
+            $table->boolean('is_online')->default(0);
+            $table->dateTime('last_action_date')->nullable();
+            $table->boolean('is_mobile')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });
