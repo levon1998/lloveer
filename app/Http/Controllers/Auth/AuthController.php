@@ -97,6 +97,13 @@ class AuthController extends Controller
             return response()->json(['success' => false, 'error' => 'Failed to login, please try again.'], 500);
         }
 
+        // update user status
+        $user = User::find(Auth::user()->id);
+        $user->is_online        = true;
+        $user->is_mobile        = $request->input('is_mobile') ? true : false;
+        $user->last_action_date = Carbon::now();
+        $user->save();
+
         // all good so return the token
         return response()->json(['success' => true, 'data'=> [ 'token' => $token ]], 200);
     }
@@ -176,6 +183,8 @@ class AuthController extends Controller
         $user = User::where('email', $request->input('email'))->first();
         $user->password = Hash::make($request->get('password'));
         $user->save();
+
+        DB::table('password_resets')->where('email', $request->input('email'))->delete();
 
         return response()->json([ 'success' => true ]);
     }
