@@ -26,13 +26,15 @@ class ValidateRegisterRequest extends FormRequest
     public function rules()
     {
         return [
-            'first_name' => 'required|string|min:2|max:255',
-            'last_name' => 'required|string|min:2|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'first_name'            => 'required|string|min:2|max:255',
+            'last_name'             => 'required|string|min:2|max:255',
+            'email'                 => 'required|string|email|max:255|unique:users',
+            'password'              => 'required|string|min:6|confirmed',
             'password_confirmation' => 'required|string|min:6',
-            'birthday' => 'required|date|date_format:Y-m-d',
-            'gender' => 'required|in:male,female'
+            'birthday'              => 'required|date|date_format:Y-m-d',
+            'gender'                => 'required|in:male,female',
+            'country_code'          => 'required|exists:country,short_name',
+            'city'                  => 'required|string|min:2|max:255',
         ];
     }
 

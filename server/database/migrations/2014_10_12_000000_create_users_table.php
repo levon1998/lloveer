@@ -26,6 +26,8 @@ class CreateUsersTable extends Migration
             $table->boolean('is_online')->default(0);
             $table->dateTime('last_action_date')->nullable();
             $table->boolean('is_mobile')->default(0);
+            $table->string('country_code');
+            $table->string('city');
             $table->rememberToken();
             $table->timestamps();
         });

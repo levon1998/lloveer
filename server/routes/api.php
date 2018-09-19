@@ -9,7 +9,7 @@ Route::post('reset-password', 'auth\AuthController@resetPassword');
 
 Route::group(['middleware' => ['jwt.auth']], function() {
     Route::get('logout', 'auth\AuthController@logout');
-    Route::get('test', function(){
-        return response()->json(['foo'=>'bar']);
-    });
+
+    //Users parts
+    Route::get('users', 'UsersController@getUsers');
 });

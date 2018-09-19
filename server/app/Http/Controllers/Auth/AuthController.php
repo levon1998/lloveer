@@ -35,13 +35,15 @@ class AuthController extends Controller
         $verificationCode = str_random(30);
 
         $user = User::create([
-            'first_name' => $request->input('first_name'),
-            'last_name'  => $request->input('last_name'),
-            'email'      => $request->input('email'),
-            'password'   => Hash::make($request->input('password')),
-            'birthday'   => $request->input('birthday'),
-            'gender'     => $request->input('gender'),
-            'token'      => $verificationCode
+            'first_name'   => $request->input('first_name'),
+            'last_name'    => $request->input('last_name'),
+            'email'        => $request->input('email'),
+            'password'     => Hash::make($request->input('password')),
+            'birthday'     => $request->input('birthday'),
+            'gender'       => $request->input('gender'),
+            'token'        => $verificationCode,
+            'country_code' => $request->input('country_code'),
+            'city'         => $request->input('city'),
         ]);
 
         dispatch(new SendVerificationCode($user));
