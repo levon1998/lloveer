@@ -1,0 +1,116 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+a {
+    color: inherit ;
+    text-decoration: none;
+}
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4; }
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0;
+    padding: 0; }
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4; }
+
+/* Remove text-shadow in selection highlight:
+ * These selection rule sets have to be separate
+ * Customize the background color to match your design
+ */
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none; }
+::selection {
+    background: #b3d4fc;
+    text-shadow: none; }
+
+/* A better looking default horizontal rul
+ */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0;
+    padding: 0; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+    outline: none;
+    border: none; }
+
+iframe {
+    width: 100%;
+    height: auto; }
+
+/* Remove default fieldset styles
+ */
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0; }
+
+/* Allow only vertical resizing of textareas
+ */
+textarea {
+    resize: vertical; }
+
+/* =========================================================================
+   Helper classes
+   ========================================================================== *
+
+/*
+ * Hide visually and from screen reader
+ */
+.hidden {
+    display: none;
+}
+.show{
+    display: block;
+}
+

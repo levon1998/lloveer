@@ -1,0 +1,16 @@
+$exo2: 'Exo 2', sans-serif;
+$changa1: 'Changa One', cursive;
+
+.header,
+.main,
+.footer {
+  margin: 0 auto;
+  font-family: $exo2;
+
+}
+
+/* =========================================================================
+   Author's custom style
+   ========================================================================== */
+$primary-color: rgb(246, 32, 70) !default; //#ec1c24;
+$secondary-color: rgb(33, 37, 56) !default; // #2d2d2e;

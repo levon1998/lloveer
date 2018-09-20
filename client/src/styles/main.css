@@ -1,0 +1,14 @@
+@import url(reset.css);
+@import url(~font-awesome/css/font-awesome.css);
+@import url(css/bootstrap.min.css);
+@import url(css/style.css);
+@import url(css/ionicons.min.css);
+.header,
+.main,
+.footer {
+  margin: 0 auto;
+  font-family: "Exo 2", sans-serif; }
+
+/* =========================================================================
+   Author's custom style
+   ========================================================================== */
